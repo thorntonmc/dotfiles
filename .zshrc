@@ -27,11 +27,6 @@ export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# GPG
-if [ -r ~/.zshrc ]; then echo 'export GPG_TTY=$(tty)' >> ~/.zshrc; \
-  else echo 'export GPG_TTY=$(tty)' >> ~/.zprofile; fi
-export GPG_TTY=$(tty)
-
 
 # GO
 export GOPATH=$HOME/go
@@ -42,8 +37,3 @@ export PATH=$PATH:~/go/bin
 export GPG_TTY=$(tty)
 
 alias tmux='tmux -2'
-export GPG_TTY=$(tty)
-export GPG_TTY=$(tty)
-export GPG_TTY=$(tty)
-export GPG_TTY=$(tty)
-export GPG_TTY=$(tty)
