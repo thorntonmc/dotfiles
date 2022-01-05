@@ -76,7 +76,7 @@ set softtabstop=4
 
 " show trailing spaces
 set list
-set listchars=eol:↴,tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
+set listchars=tab:→\ ,nbsp:␣,trail:·,extends:⟩,precedes:⟨
 
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
@@ -93,23 +93,6 @@ if has("autocmd")
   filetype indent on
   filetype plugin on
 endif
-
-" let mapleader=","
-"vnoremap <silent> <leader>y :w !xsel -i -b<CR>
-"nnoremap <silent> <leader>y V:w !xsel -i -b<CR>
-"nnoremap <silent> <leader>p :silent :r !xsel -o -b<CR>
-
-" quicksave
-noremap <silent> <C-s> :update<CR>
-vnoremap <silent> <C-s> <C-c>:update<CR>
-inoremap <silent> <C-s> <C-o>:update<CR>
-
-" remap code completion to ^space
-"inoremap <Nul> <C-x><C-o>
-" inoremap <Nul> <C-n>
-
-inoremap <C-Space> <C-x><C-o>
-inoremap <C-@> <C-Space>
 
 " always display status line
 set laststatus=2
