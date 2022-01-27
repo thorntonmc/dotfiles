@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/michaelthornton/.config'
+let g:netrw_dirhist_4='/Users/michaelthornton/.config/alacritty'
+let g:netrw_dirhist_3='/Users/michaelthornton/.config'
+let g:netrw_dirhist_2='/Users/michaelthornton/leetcode-go/142'
+let g:netrw_dirhist_1='/Users/michaelthornton/wasabi/main/.git'
