@@ -1,3 +1,30 @@
+let need_to_install_plugins = 0
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    let need_to_install_plugins = 1
+endif
+
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'vim-scripts/The-NERD-tree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'fatih/go-vim'
+
+" Language Specific Plugins {{{
+" Markdown
+Plug 'godlygeek/tabular' 
+Plug 'plasticboy/vim-markdown'
+" }}
+
+
+call plug#end()
+
+filetype plugin indent on
+
+
 " use vim settings, rather than vi settings
 " must be first, because it changes other options as a side effect
 set nocompatible
@@ -104,4 +131,41 @@ cnoremap kj <Esc>
 " Move lines in V-line mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" writes the content of the file automatically if you call :make
+set autowrite
+
+" easy Quickfix browse with vim-go
+"map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" build and run in vim-go
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+
+" file browser
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+"let NERDTreeMinimalUI = 1
+let g:nerdtree_open = 0
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+let NERDTreeShowHidden=1
+" NERDTree setting defaults to work around http://github.com/scrooloose/nerdtree/issues/489
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = "RO"
+
+" go def tab
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
+
 
