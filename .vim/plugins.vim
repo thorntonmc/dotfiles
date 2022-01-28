@@ -18,6 +18,8 @@ Plug 'sainnhe/everforest'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'yunlingz/equinusocio-material.vim'
 
+Plug 'airblade/vim-gitgutter'
+
 
 " Language Specific Plugins {{{
 " Markdown
@@ -25,11 +27,6 @@ Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular' 
 Plug 'plasticboy/vim-markdown'
 " }}
-
-
-let g:everforest_background = 'soft'
-let g:everforest_ui_contrast = 'high'
-colorscheme everforest
 
 
 call plug#end()
