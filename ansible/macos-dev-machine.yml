@@ -41,4 +41,4 @@
   - name: copy alacritty config
     copy:
       src: "{{ main_dir }}/.config/alacritty"
-      dest: "{{ usr_home}}/.config/alacritty"
+      dest: "{{ usr_home }}/.config/alacritty"
