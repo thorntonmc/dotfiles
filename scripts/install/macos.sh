@@ -23,6 +23,7 @@ install_ansible() {
 install() {
     check_brew # brew must be installed
     install_ansible
+    make -C $MAIN_DIR macos-dev-machine
     echo install complete
 }
 
