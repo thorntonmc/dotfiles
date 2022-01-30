@@ -13,11 +13,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/The-NERD-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'projekt0n/github-nvim-theme'
-Plug 'sainnhe/everforest'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'yunlingz/equinusocio-material.vim'
-
 Plug 'airblade/vim-gitgutter'
 
 
