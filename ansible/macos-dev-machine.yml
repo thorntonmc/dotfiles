@@ -1,6 +1,9 @@
 ---
 - name: macOS dev-machine
   hosts: localhost
+  vars:
+    main_dir: "{{ lookup('env', 'MAIN_DIR') }}"
+    usr_home: "{{ lookup('env', 'HOME') }}"
 
   tasks:
   - name: install go
@@ -19,3 +22,23 @@
     homebrew:
       name: tldr
       state: present
+  - name: copy .vimrc
+    copy:
+      src: "{{ main_dir }}/.vimrc"
+      dest: "{{ usr_home }}/.vimrc"
+  - name: copy .vim folder
+    copy:
+      src: "{{ main_dir }}/.vim"
+      dest: "{{ usr_home }}/.vim"
+  - name: copy .tmux.conf
+    copy:
+      src: "{{ main_dir }}/.tmux_config"
+      dest: "{{ usr_home }}/.tmux_config"
+  - name: make sure .config exists
+    file:
+      path: "{{ usr_home }}/.config"
+      state: directory
+  - name: copy alacritty config
+    copy:
+      src: "{{ main_dir }}/.config/alacritty"
+      dest: "{{ usr_home}}/.config/alacritty"
