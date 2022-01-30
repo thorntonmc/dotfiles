@@ -17,6 +17,7 @@ install_ansible() {
 
     echo "ansible not installed, installing"
     brew install ansible
+    ansible-galaxy collection install community.general
 }
 
 install() {
