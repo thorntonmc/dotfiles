@@ -11,6 +11,10 @@
     homebrew:
       name: neovim
       state: present
+  - name: install lazygit
+    homebrew:
+      name: lazygit
+      state: present
   - name:  install tldr
     homebrew:
       name: tldr
