@@ -1,0 +1,9 @@
+---
+- name: macOS dev-machine
+  hosts: localhost
+
+  tasks:
+  - name: install go
+    homebrew:
+      name: go
+      state: present
