@@ -7,3 +7,7 @@
     homebrew:
       name: go
       state: present
+  - name: install nvim
+    homebrew:
+      name: neovim
+      state: present
