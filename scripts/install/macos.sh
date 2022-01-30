@@ -9,8 +9,19 @@ check_brew() {
     fi
 }
 
+install_ansible() {
+    if [ -x "$(command -v ansible)" ]; then
+        echo "ansible already installed"
+        return
+    fi
+
+    echo "ansible not installed, installing"
+    brew install ansible
+}
+
 install() {
     check_brew # brew must be installed
+    install_ansible
     echo install complete
 }
 
