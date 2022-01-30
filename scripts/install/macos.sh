@@ -6,6 +6,7 @@ check_brew() {
     if [ ! $? == 0 ]; then
         echo "brew must be installed"
         exit1
+        exit 1
     fi
 }
 
