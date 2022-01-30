@@ -42,3 +42,15 @@
     copy:
       src: "{{ main_dir }}/.config/alacritty"
       dest: "{{ usr_home }}/.config/alacritty"
+  - name: copy .zshrc
+    copy:
+      src: "{{ main_dir }}/.zshrc"
+      dest: "{{ usr_home }}/.zshrc"
+  - name: make sure .zshrc directory exists
+    file:
+      path: "{{ usr_home }}/.zsh"
+      state: directory
+  - name: copy .zsh supporting files
+    copy:
+      src: "{{ main_dir }}/.zsh"
+      dest: "{{ usr_home }}/.zsh"
