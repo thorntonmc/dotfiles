@@ -19,9 +19,12 @@ Plug 'airblade/vim-gitgutter'
 
 " Language Specific Plugins {{{
 " Markdown
-Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular' 
 Plug 'plasticboy/vim-markdown'
+" go
+Plug 'fatih/vim-go'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " }}
 
 
