@@ -11,6 +11,8 @@ endif
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/The-NERD-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yunlingz/equinusocio-material.vim'
