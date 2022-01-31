@@ -43,8 +43,8 @@
       force: yes
   - name: copy .tmux.conf
     copy:
-      src: "{{ main_dir }}/.tmux_config"
-      dest: "{{ usr_home }}/.tmux_config"
+      src: "{{ main_dir }}/.tmux.conf"
+      dest: "{{ usr_home }}/.tmux.conf"
   - name: make sure .config exists
     file:
       path: "{{ usr_home }}/.config"
