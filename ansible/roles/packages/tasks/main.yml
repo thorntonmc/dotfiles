@@ -1,0 +1,5 @@
+- include_tasks: brew.yml
+  when: manager == 'brew'
+
+- include_tasks: apt.yml
+  when: manager == 'apt'

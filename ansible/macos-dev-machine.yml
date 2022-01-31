@@ -6,26 +6,11 @@
     usr_home: "{{ lookup('env', 'HOME') }}"
 
   tasks:
-  - name: install go
-    homebrew:
-      name: go
-      state: present
-  - name: install nvim
-    homebrew:
-      name: neovim
-      state: present
-  - name: install lazygit
-    homebrew:
-      name: lazygit
-      state: present
-  - name:  install tldr
-    homebrew:
-      name: tldr
-      state: present
-  - name: install ripgrep
-    homebrew:
-      name: ripgrep
-      state: present
+  - name: install packages
+    include_role:
+      name: packages
+    vars:
+      manager: "brew"
   - name: copy .vimrc
     copy:
       src: "{{ main_dir }}/.vimrc"
