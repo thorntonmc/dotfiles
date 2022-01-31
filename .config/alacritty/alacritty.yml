@@ -3,6 +3,9 @@ env:
 
 font:
   size: 18.0
+  normal:
+    family: Consolas
+
 scrolling:
   history: 10000
   multiplier: 3
