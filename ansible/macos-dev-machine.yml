@@ -30,10 +30,17 @@
     copy:
       src: "{{ main_dir }}/.vimrc"
       dest: "{{ usr_home }}/.vimrc"
+      force: yes
   - name: copy .vim folder
     copy:
       src: "{{ main_dir }}/.vim"
       dest: "{{ usr_home }}/.vim"
+      force: yes
+  - name: copy .vim-plugs
+    copy:
+      src: "{{ main_dir }}/.vim/plugins.vim"
+      dest: "{{ usr_home }}/.vim/plugins.vim"
+      force: yes
   - name: copy .tmux.conf
     copy:
       src: "{{ main_dir }}/.tmux_config"
