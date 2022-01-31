@@ -105,6 +105,10 @@ cnoremap kj <Esc>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" fuzzy finder binds
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <Leader>f :Rg<CR>
+
 " writes the content of the file automatically if you call :make
 set autowrite
 
