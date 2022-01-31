@@ -45,6 +45,7 @@
     copy:
       src: "{{ main_dir }}/.tmux.conf"
       dest: "{{ usr_home }}/.tmux.conf"
+      force: yes
   - name: make sure .config exists
     file:
       path: "{{ usr_home }}/.config"
@@ -53,6 +54,7 @@
     copy:
       src: "{{ main_dir }}/.config/alacritty"
       dest: "{{ usr_home }}/.config/alacritty"
+      force: yes
   - name: copy .zshrc
     copy:
       src: "{{ main_dir }}/.zshrc"
@@ -61,7 +63,9 @@
     file:
       path: "{{ usr_home }}/.zsh"
       state: directory
+      force: yes
   - name: copy .zsh supporting files
     copy:
       src: "{{ main_dir }}/.zsh"
       dest: "{{ usr_home }}/.zsh"
+      force: yes
