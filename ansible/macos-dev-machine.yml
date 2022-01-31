@@ -22,6 +22,10 @@
     homebrew:
       name: tldr
       state: present
+  - name: install ripgrep
+    homebrew:
+      name: ripgrep
+      state: present
   - name: copy .vimrc
     copy:
       src: "{{ main_dir }}/.vimrc"
