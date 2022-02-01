@@ -5,3 +5,5 @@
 install() {
     make -C $MAIN_DIR ubuntu-dev-machine
 }
+
+install
