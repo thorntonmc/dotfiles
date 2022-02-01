@@ -7,5 +7,7 @@ install:
 	bash $(INSTALL_MAIN)
 macos-dev-machine:
 	ansible-playbook $(ANSIBLE_DIR)/$@.yml
+ubuntu-dev-machine:
+	ansible-playbook $(ANSIBLE_DIR)/$@.yml
 diff:
 	bash $(MAIN_DIR)/diff.sh
