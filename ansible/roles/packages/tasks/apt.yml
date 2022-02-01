@@ -7,5 +7,6 @@
   apt: 
     name: "{{ item.package_name }}"
     state: "{{ item.state }}"
+    become: true
   with_items:
     "{{ packages }}"
