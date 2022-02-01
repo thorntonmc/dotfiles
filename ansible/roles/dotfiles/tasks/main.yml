@@ -8,10 +8,25 @@
     src: "{{ main_dir }}/.vim"
     dest: "{{ usr_home }}/.vim"
     force: yes
-- name: copy .vim-plugs
+- name: copy .vim/general
+  copy:
+    src: "{{ main_dir }}/.vim/general.vim"
+    dest: "{{ usr_home }}/.vim/general.vim"
+    force: yes
+- name: copy .vim/plugins
   copy:
     src: "{{ main_dir }}/.vim/plugins.vim"
     dest: "{{ usr_home }}/.vim/plugins.vim"
+    force: yes
+- name: copy .vim/plugin-settings
+  copy:
+    src: "{{ main_dir }}/.vim/plugin-settings.vim"
+    dest: "{{ usr_home }}/.vim/plugin-settings.vim"
+    force: yes
+- name: copy .vim/ui
+  copy:
+    src: "{{ main_dir }}/.vim/ui.vim"
+    dest: "{{ usr_home }}/.vim/ui.vim"
     force: yes
 - name: copy .tmux.conf
   copy:
