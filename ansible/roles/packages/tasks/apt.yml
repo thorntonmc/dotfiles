@@ -1,3 +1,8 @@
+j- name: add lazygit repo
+  apt_repository:
+    repo: ppa:lazygit-team/release
+    state: present
+
 - name: install brew packages
   apt: 
     name: "{{ item.package_name }}"
