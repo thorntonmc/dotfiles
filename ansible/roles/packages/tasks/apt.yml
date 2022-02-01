@@ -3,7 +3,7 @@
     repo: ppa:lazygit-team/release
     state: present
 
-- name: install brew packages
+- name: install apt packages
   apt: 
     name: "{{ item.package_name }}"
     state: "{{ item.state }}"
