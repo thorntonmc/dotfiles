@@ -3,3 +3,7 @@ packages:
   - { package_name: "neovim", state: "present" }
   - { package_name: "tldr",  state: "present" }
   - { package_name: "ripgrep", state: "present" }
+
+apt_packages: 
+  - { package_name: "neovim", state: "present" }
+  - { package_name: "tldr",  state: "present" }

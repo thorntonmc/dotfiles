@@ -9,7 +9,7 @@
     name: "{{ item.package_name }}"
     state: "{{ item.state }}"
   with_items:
-    "{{ packages }}"
+    "{{ apt_packages }}"
 
 - name: download ripgrep binary
   get_url:
