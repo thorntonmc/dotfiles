@@ -37,6 +37,11 @@
   file:
     path: "{{ usr_home }}/.config"
     state: directory
+- name: copy nvim dir
+  copy:
+    src: "{{ main_dir}}/.config/nvim"
+    dest: "{{ usr_home}}/.config/"
+    force: yes
 - name: copy alacritty config
   copy:
     src: "{{ main_dir }}/.config/alacritty"
