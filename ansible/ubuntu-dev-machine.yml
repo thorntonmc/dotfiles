@@ -11,46 +11,6 @@
       name: packages
     vars:
       manager: "apt"
-  - name: copy .vimrc
-    copy:
-      src: "{{ main_dir }}/.vimrc"
-      dest: "{{ usr_home }}/.vimrc"
-      force: yes
-  - name: copy .vim folder
-    copy:
-      src: "{{ main_dir }}/.vim"
-      dest: "{{ usr_home }}/.vim"
-      force: yes
-  - name: copy .vim-plugs
-    copy:
-      src: "{{ main_dir }}/.vim/plugins.vim"
-      dest: "{{ usr_home }}/.vim/plugins.vim"
-      force: yes
-  - name: copy .tmux.conf
-    copy:
-      src: "{{ main_dir }}/.tmux.conf"
-      dest: "{{ usr_home }}/.tmux.conf"
-      force: yes
-  - name: make sure .config exists
-    file:
-      path: "{{ usr_home }}/.config"
-      state: directory
-  - name: copy alacritty config
-    copy:
-      src: "{{ main_dir }}/.config/alacritty"
-      dest: "{{ usr_home }}/.config/alacritty"
-      force: yes
-  - name: copy .zshrc
-    copy:
-      src: "{{ main_dir }}/.zshrc"
-      dest: "{{ usr_home }}/.zshrc"
-  - name: make sure .zshrc directory exists
-    file:
-      path: "{{ usr_home }}/.zsh"
-      state: directory
-      force: yes
-  - name: copy .zsh supporting files
-    copy:
-      src: "{{ main_dir }}/.zsh"
-      dest: "{{ usr_home }}/.zsh"
-      force: yes
+  - name: copy dotfiles
+    include_role:
+      name: dotfiles

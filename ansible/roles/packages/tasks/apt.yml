@@ -12,11 +12,19 @@
     "{{ apt_packages }}"
 
 - name: download ripgrep binary
+  become: true
   get_url:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-    dest: ./
-    mode: 770
+    dest: /etc/
+    mode: 777
+  register: binary_path
+
+- name: output last value
+  debug:
+    msg: "{{ binary_path }}"
+
 
 - name: install ripgrep
+  become: true
   apt:
-    deb: /tmp/thorntonmc/dotfiles/install/ripgrep_13.0.0_amd64.deb
+    deb: "{{ binary_path.dest }}"
