@@ -9,6 +9,12 @@
   apt_repository:
     repo: ppa:neovim-ppa/stable
     state: present
+
+- name: update apt cache
+  become: true
+  apt:
+    update_cache: true
+
 - name: install apt packages
   become: true
   apt: 
