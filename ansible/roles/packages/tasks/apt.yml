@@ -4,6 +4,11 @@
     repo: ppa:lazygit-team/release
     state: present
 
+- name: add nvim ppa
+  become: true
+  apt_repository:
+    repo: ppa:neovim-ppa/stable
+    state: present
 - name: install apt packages
   become: true
   apt: 
