@@ -28,7 +28,7 @@
   get_url:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
     dest: /etc/
-    mode: 777
+    mode: 770
   register: binary_path
 
 - name: output last value
