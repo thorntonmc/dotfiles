@@ -1,4 +1,5 @@
-- name: add lazygit repo
+- name: add lazygit ppa
+  become: true
   apt_repository:
     repo: ppa:lazygit-team/release
     state: present
