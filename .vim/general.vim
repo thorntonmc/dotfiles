@@ -1,5 +1,7 @@
 " use vim settings, rather than vi settings
 " must be first, because it changes other options as a side effect
+
+set termguicolors
 set nocompatible
 
 " maintain undo history between sessions
@@ -116,3 +118,5 @@ filetype plugin indent on
 
 syntax on
 set t_Co=256
+
+set background=dark

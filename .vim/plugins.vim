@@ -18,15 +18,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yunlingz/equinusocio-material.vim'
 Plug 'airblade/vim-gitgutter'
 
-
 " Language Specific Plugins {{{
 " Markdown
 Plug 'godlygeek/tabular' 
 Plug 'plasticboy/vim-markdown'
 " go
 Plug 'fatih/vim-go'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " }}
 
 
