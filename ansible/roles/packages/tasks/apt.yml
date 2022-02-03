@@ -1,7 +1,13 @@
-- name: add lazygit repo
+- name: add nvim ppa
+  become: true
   apt_repository:
-    repo: ppa:lazygit-team/release
+    repo: ppa:neovim-ppa/stable
     state: present
+
+- name: update apt cache
+  become: true
+  apt:
+    update_cache: true
 
 - name: install apt packages
   become: true
@@ -16,7 +22,7 @@
   get_url:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
     dest: /etc/
-    mode: 777
+    mode: 770
   register: binary_path
 
 - name: output last value

@@ -11,6 +11,11 @@
       name: packages
     vars:
       manager: "apt"
+
+  - name: install lazygit
+    shell:
+      cmd: go install github.com/jesseduffield/lazygit@latest
+
   - name: copy dotfiles
     include_role:
       name: dotfiles
