@@ -5,6 +5,9 @@ font:
   size: 18.0
   normal:
     family: Consolas
+  bold:
+    family: Consolas
+
 
 scrolling:
   history: 10000
@@ -19,7 +22,4 @@ window:
   opacity: 0.95
 
 key_bindings:
-  - { key: Space,  mods: Shift,           action: ToggleViMode            }
-
-env:
-  TERM: xterm-256color
+  - { key: Space,  mods: Control,           action: ToggleViMode            }
