@@ -3,59 +3,71 @@
     src: "{{ main_dir }}/.vimrc"
     dest: "{{ usr_home }}/.vimrc"
     force: yes
+
 - name: copy .vim folder
   copy:
     src: "{{ main_dir }}/.vim"
     dest: "{{ usr_home }}/.vim"
     force: yes
+
 - name: copy .vim/general
   copy:
     src: "{{ main_dir }}/.vim/general.vim"
     dest: "{{ usr_home }}/.vim/general.vim"
     force: yes
+
 - name: copy .vim/plugins
   copy:
     src: "{{ main_dir }}/.vim/plugins.vim"
     dest: "{{ usr_home }}/.vim/plugins.vim"
     force: yes
+
 - name: copy .vim/plugin-settings
   copy:
     src: "{{ main_dir }}/.vim/plugin-settings.vim"
     dest: "{{ usr_home }}/.vim/plugin-settings.vim"
     force: yes
+
 - name: copy .vim/ui
   copy:
     src: "{{ main_dir }}/.vim/ui.vim"
     dest: "{{ usr_home }}/.vim/ui.vim"
     force: yes
+
 - name: copy .tmux.conf
   copy:
     src: "{{ main_dir }}/.tmux.conf"
     dest: "{{ usr_home }}/.tmux.conf"
     force: yes
+
 - name: make sure .config exists
   file:
     path: "{{ usr_home }}/.config"
     state: directory
+
 - name: copy nvim dir
   copy:
     src: "{{ main_dir}}/.config/nvim"
     dest: "{{ usr_home}}/.config/"
     force: yes
+
 - name: copy alacritty config
   copy:
     src: "{{ main_dir }}/.config/alacritty"
     dest: "{{ usr_home }}/.config/alacritty"
     force: yes
+
 - name: copy .zshrc
   copy:
     src: "{{ main_dir }}/.zshrc"
     dest: "{{ usr_home }}/.zshrc"
+
 - name: make sure .zshrc directory exists
   file:
     path: "{{ usr_home }}/.zsh"
     state: directory
     force: yes
+
 - name: copy .zsh supporting files
   copy:
     src: "{{ main_dir }}/.zsh"
