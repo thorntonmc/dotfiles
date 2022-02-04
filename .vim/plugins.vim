@@ -11,6 +11,10 @@ endif
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/The-NERD-tree'
