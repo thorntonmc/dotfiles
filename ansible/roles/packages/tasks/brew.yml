@@ -3,5 +3,5 @@
     name: "{{ item.package_name }}"
     state: "{{ item.state }}"
   with_items:
-    "{{ packages }}"
+    "{{ brew_packages }}"
 
