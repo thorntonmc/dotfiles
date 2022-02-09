@@ -1,4 +1,3 @@
-packages:
 brew_packages:
   - { package_name: "go",  state: "present" }
   - { package_name: "neovim", state: "present" }
