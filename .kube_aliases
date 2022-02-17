@@ -1,0 +1,17 @@
+# needham
+alias kas='kubectl --kubeconfig ~/.kube/mthornton-alpha5-staging'
+alias kag='kubectl --kubeconfig ~/.kube/mthornton-alpha5-general'
+alias kah='kubectl --kubeconfig ~/.kube/mthornton-alpha5-head1'
+alias katt='kubectl --kubeconfig ~/.kube/michaelthornton-alpha23-storage1'
+alias kattg='kubectl --kubeconfig ~/.kube/michaelthornton-alpha23-general'
+alias kattc='kubectl --kubeconfig ~/.kube/michaelthornton-alpha23-crdb1'
+
+alias kastg='kubectl --kubeconfig=$HOME/.kube/mthornton-alpha17-general'
+
+# beta
+alias kbh='kubectl --kubeconfig ~/.kube/mthornton-beta1-head1'
+
+# personal
+alias kmg='kubectl --kubeconfig ~/.kube/mthornton-miketvlt1-general'
+
+alias vim='nvim'
