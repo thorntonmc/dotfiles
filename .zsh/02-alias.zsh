@@ -1,3 +1,3 @@
 alias vim=nvim
-alias tmux='tmux -2'
 alias ls='ls -G'
+alias l='ls -1G'

@@ -1,13 +1,5 @@
-env:
-  TERM: alacritty
-
 font:
-  size: 18.0
-  normal:
-    family: Consolas
-  bold:
-    family: Consolas
-
+  size: 16.0
 
 scrolling:
   history: 10000
