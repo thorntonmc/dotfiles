@@ -88,3 +88,6 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeGlyphReadOnly = "RO"
+
+" fzf anchor to bottom
+let g:fzf_layout = { 'down': '~40%' }
