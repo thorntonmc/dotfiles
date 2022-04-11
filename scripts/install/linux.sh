@@ -4,7 +4,7 @@
 # supported distro
 
 install_ansible() {
-    if [ -x "$(command -v ansible)"; then
+    if [ -x "$(command -v ansible-playbook)" ]; then
         echo "ansible already installed"
         return
     fi
@@ -22,7 +22,14 @@ install_ansible() {
 }
 install() {
     install_ansible
-    make -C $MAIN_DIR ubuntu-dev-machine
+    if [ $PACKAGE_MGR == "APT" ]; then
+        make -C $MAIN_DIR ubuntu-dev-machine
+        return
+    fi
+    if [ $PACKAGE_MGR == "PACMAN" ]; then
+       make -C $MAIN_DIR arch-dev-machine
+       return
+    fi
 }
 
 install
