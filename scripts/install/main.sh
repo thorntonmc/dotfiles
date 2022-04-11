@@ -6,7 +6,16 @@ case "$(uname -s)" in
 
     Linux)
         echo "linux"
-        $INSTALL_DIR/linux.sh
+        . /etc/os-release
+        if [ -x "$(command -v apt)" ]; then
+           PACKAGE_MGR="APT"
+        fi
+
+        if [ -x "$(command -v pacman)" ]; then
+           PACKAGE_MGR="PACMAN"
+        fi
+        echo $PACKAGE_MGR
+        PACKAGE_MGR=$PACKAGE_MGR $INSTALL_DIR/linux.sh
         ;;
     *)
         echo "unsupported OS"

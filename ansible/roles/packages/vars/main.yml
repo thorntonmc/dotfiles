@@ -9,3 +9,11 @@ brew_packages:
 apt_packages: 
   - { package_name: "neovim", state: "present" }
   - { package_name: "tldr",  state: "present" }
+
+pacman_packages:
+  - { package_name: "go", state: "present" }
+  - { package_name: "neovim", state: "present" }
+  - { package_name: "tldr", state: "present" }
+  - { package_name: "ripgrep", state: "present" }
+  - { package_name: "lazygit", state: "present" }
+  - { package_name: "zsh", state: "present" }

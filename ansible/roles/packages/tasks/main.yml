@@ -3,3 +3,6 @@
 
 - include_tasks: apt.yml
   when: manager == 'apt'
+
+- include_tasks: pacman.yml
+  when: manager == 'pacman'

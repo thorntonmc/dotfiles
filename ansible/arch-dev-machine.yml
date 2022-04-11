@@ -1,0 +1,17 @@
+---
+- name: arch dev-machine
+  hosts: localhost
+  vars:
+    main_dir: "{{ lookup('env', 'MAIN_DIR') }}"
+    usr_home: "{{ lookup('env', 'HOME') }}"
+
+  tasks:
+  - name: install packages
+    include_role:
+      name: packages
+    vars:
+      manager: "pacman"
+
+  - name: copy dotfiles
+    include_role:
+      name: dotfiles
