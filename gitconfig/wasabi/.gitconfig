@@ -4,7 +4,7 @@
 	insteadOf = https://github.com/
 [user]
 	name = thorntonmc
-	email = mt@mthornton.dev 
+	email =  mthornton@wasabi.com
 	signingkey = D5CBAF7E8AA8F448
 [commit]
 	gpgsign = true
