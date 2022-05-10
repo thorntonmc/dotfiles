@@ -308,8 +308,8 @@ set $ws10 "10"
 #assign [class="Alacritty"] $ws1
 #assign [class="(?i)firefox"] $ws2
 #assign [class="Thunar"] $ws3
-assign [class="Thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+#assign [class="Thunderbird"] $ws4
+#assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace then the current:
 for_window [class=alacritty] focus
