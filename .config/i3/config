@@ -281,7 +281,7 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 ######################################
 # keybindings for custom scripts: #
 ######################################
-bindsym $mod+Shift+g exec ~/.config/i3/scripts/swap-keylayout
+bindsym $mod+Shift+g exec --no-startup-id ~/.config/i3/scripts/swap-keylayout
 
 ##########################################
 # configuration for workspace behaviour: #
