@@ -2,15 +2,12 @@
 
 env=$(setxkbmap -query | awk 'FNR == 3 { print $2}')
 
-if [ "$env" == "us" ]; then
-    setxkbmap -layout tr
-    echo "tr"
-    exit 0
-fi
-
 if [ "$env" == "tr" ]; then
-    setxkbmap -layout us
-    echo "us"
-    exit 0
+    echo "🇹🇷"
+    return
 fi
 
+if [ "$env" == "us" ]; then
+    echo "🇺🇸"
+    return
+fi
