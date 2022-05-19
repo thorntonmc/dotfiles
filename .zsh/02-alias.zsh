@@ -1,4 +1,4 @@
 alias vim=nvim
 alias ls='ls --color'
 alias l='ls --color'
-alias history=history 0
+alias history="history 1"
