@@ -11,3 +11,10 @@ op-login() {
     eval $(cat $HOME/1pw | op signin | cat)
     echo "logged in to op"
 }
+
+op-get-pw() {
+    [ -z $1 ] && echo no args provided && return
+
+    op item get $1 --format=json | jq '.fields[0].value, .fields[1].value'
+    return
+}
