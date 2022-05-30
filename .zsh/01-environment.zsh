@@ -6,4 +6,4 @@ path+="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin"
 path+="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export TERM=xterm-256color
 
-export EDITOR=vim
+export EDITOR=nvim
