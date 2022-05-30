@@ -19,3 +19,4 @@ pacman_packages:
   - { package_name: "zsh", state: "present" }
   - { package_name: "spotifyd", state: "present" }
   - { package_name: "jq", state: "present" }
+  - { package_name: "stow", state: "present" }
