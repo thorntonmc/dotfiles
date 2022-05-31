@@ -11,7 +11,3 @@
       name: packages
     vars:
       manager: "brew"
-
-  - name: copy dotfiles
-    include_role:
-      name: dotfiles

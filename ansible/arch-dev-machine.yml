@@ -11,7 +11,3 @@
       name: packages
     vars:
       manager: "pacman"
-
-  - name: copy dotfiles
-    include_role:
-      name: dotfiles
