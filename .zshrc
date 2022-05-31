@@ -40,9 +40,3 @@ export HISTSIZE=1000
 export SAVEHIST=1000
 export HISTFILESIZE=1000000
 export HISTFILE=$HOME/.zsh_history
-
-# 1password
-autoload -Uz compinit
-compinit
-eval "$(op completion zsh)"; compdef _op op
-eval "$(cat $HOME/1pw | op signin)"
