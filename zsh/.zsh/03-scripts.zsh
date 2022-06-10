@@ -18,3 +18,7 @@ op-get-pw() {
     op item get "$1" --format=json | jq '.fields[0].value, .fields[1].value'
     return
 }
+
+op-get-ba() {
+    op-login && op-get-pw ba
+}
