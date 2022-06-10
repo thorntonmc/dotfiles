@@ -5,6 +5,8 @@ if [ -z "$MAIN_DIR" ]; then
     exit 1
 fi
 
-pushd $MAIN_DIR
+pushd $MAIN_DIR > /dev/null
+stow -t "$HOME/.local" .local
 stow -t $HOME zsh
-popd
+stow -t $HOME bash
+popd > /dev/null
