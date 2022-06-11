@@ -6,8 +6,8 @@
     usr_home: "{{ lookup('env', 'HOME') }}"
 
   tasks:
-  - name: install packages
-    include_role:
-      name: packages
-    vars:
-      manager: "pacman"
+    - name: install packages
+      include_role:
+        name: packages
+      vars:
+        manager: "pacman"

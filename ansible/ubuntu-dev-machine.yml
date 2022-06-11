@@ -6,12 +6,12 @@
     usr_home: "{{ lookup('env', 'HOME') }}"
 
   tasks:
-  - name: install packages
-    include_role:
-      name: packages
-    vars:
-      manager: "apt"
+    - name: install packages
+      include_role:
+        name: packages
+      vars:
+        manager: "apt"
 
-  - name: install lazygit
-    shell:
-      cmd: go install github.com/jesseduffield/lazygit@latest
+    - name: install lazygit
+      shell:
+        cmd: go install github.com/jesseduffield/lazygit@latest

@@ -14,4 +14,4 @@ window:
   opacity: 0.95
 
 key_bindings:
-  - { key: Space,  mods: Control,           action: ToggleViMode            }
+  - { key: Space, mods: Control, action: ToggleViMode }
