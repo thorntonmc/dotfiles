@@ -1,5 +1,5 @@
 #!/bin/bash
 
 for config in "${HOME}"/.bash/*; do
-    source $config
+    source "${config}"
 done
