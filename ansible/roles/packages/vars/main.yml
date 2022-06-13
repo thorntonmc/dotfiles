@@ -12,11 +12,11 @@ apt_packages:
 
 pacman_packages:
   - { package_name: "go", state: "present" }
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "tldr", state: "present" }
-  - { package_name: "ripgrep", state: "present" }
-  - { package_name: "lazygit", state: "present" }
-  - { package_name: "zsh", state: "present" }
-  - { package_name: "spotifyd", state: "present" }
   - { package_name: "jq", state: "present" }
+  - { package_name: "lazygit", state: "present" }
+  - { package_name: "neovim", state: "present" }
+  - { package_name: "ripgrep", state: "present" }
+  - { package_name: "spotifyd", state: "present" }
   - { package_name: "stow", state: "present" }
+  - { package_name: "tldr", state: "present" }
+  - { package_name: "zsh", state: "present" }
