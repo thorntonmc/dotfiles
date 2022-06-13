@@ -7,13 +7,13 @@ function install-ansible() {
     fi
     echo "ansible not installed, installing"
     if [ "$PACKAGE_MGR" == "APT" ]; then
-        apt install ansible
+        apt install -y ansible
         return
     fi
     
     if [ "$PACKAGE_MGR" == "PACMAN" ]; then
        echo here
-       yes | pacman -S ansible
+       pacman -S --noconfirm ansible
        return
     fi
 }
