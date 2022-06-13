@@ -1,0 +1,35 @@
+- name: gather package facts
+  ansible.builtin.package_facts:
+    manager: auto
+  tags: rootless-podman
+
+- name: fail if slirp4netns is not installed
+  ansible.builtin.meta: end_play
+  when: "'slirp4netns' not in ansible_facts.packages"
+  tags: rootless-podman
+
+- name: increase number of namespaces
+  become: true
+  ansible.posix.sysctl:
+    name: user.max_user_namespaces
+    value: 28633
+    reload: true
+  tags: rootless-podman
+
+- name: set subuid
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/subuid
+    line: "{{ ansible_user_id }}:100000:65536"
+    create: true
+    mode: u=rw, g=r, o=r
+  tags: rootless-podman
+
+- name: set subgid
+  become: true
+  ansible.builtin.lineinfile:
+    path: /etc/subgid
+    line: "{{ ansible_user_id }}:100000:65536"
+    create: true
+    mode: u=rw, g=r, o=r
+  tags: rootless-podman

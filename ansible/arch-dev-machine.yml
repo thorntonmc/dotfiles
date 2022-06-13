@@ -11,3 +11,9 @@
         name: packages
       vars:
         manager: "pacman"
+      tags: packages
+
+    - name: setup rootless podman
+      include_role:
+        name: rootless-podman
+      tags: rootless-podman
