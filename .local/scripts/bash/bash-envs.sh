@@ -5,5 +5,5 @@ for config in "${HOME}"/.bash/*; do
     friendlyName="$(sed -r 's/[0-9-]/ /g' <<< "${baseName}" |  tr -d ' ')"
     aliasName="bash-${friendlyName}"
 
-    alias "${aliasName}"='$EDITOR ${config}'
+    alias "${aliasName}"="\${EDITOR} ${config}"
 done
