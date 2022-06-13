@@ -7,6 +7,7 @@ function install-ansible() {
     fi
     echo "ansible not installed, installing"
     if [ "$PACKAGE_MGR" == "APT" ]; then
+        DEBIAN_FRONTEND=noninteractive
         apt install -y ansible
         return
     fi
