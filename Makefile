@@ -2,6 +2,8 @@ export MAIN_DIR:=$(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 export INSTALL_DIR=$(MAIN_DIR)/install
 export ANSIBLE_DIR=$(MAIN_DIR)/ansible
 
+.PHONY: install
+
 INSTALL_MAIN := $(INSTALL_DIR)/main.sh
 install:
 	bash $(INSTALL_MAIN)
