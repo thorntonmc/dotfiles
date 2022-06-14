@@ -1,8 +1,11 @@
-- include_tasks: brew.yml
-  when: manager == 'brew'
-
 - include_tasks: apt.yml
-  when: manager == 'apt'
+  when: manager == "apt"
+
+- include_tasks: brew.yml
+  when: manager == "brew"
+
+- include_tasks: dnf.yml
+  when: manager == "dnf"
 
 - include_tasks: pacman.yml
-  when: manager == 'pacman'
+  when: manager == "pacman"

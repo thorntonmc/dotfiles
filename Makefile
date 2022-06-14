@@ -1,19 +1,16 @@
-export MAIN_DIR:=$(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-export INSTALL_DIR=$(MAIN_DIR)/install
-export ANSIBLE_DIR=$(MAIN_DIR)/ansible
+main_dir:=$(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+install_dir:=$(main_dir)/install
+ansible_dir:=$(main_dir)/ansible
+install_main := $(install_dir)/main.sh
 
 .PHONY: install
 
-INSTALL_MAIN := $(INSTALL_DIR)/main.sh
-install:
-	bash $(INSTALL_MAIN)
-macos-dev-machine:
-	ansible-playbook $(ANSIBLE_DIR)/$@.yml
-ubuntu-dev-machine:
-	ansible-playbook $(ANSIBLE_DIR)/$@.yml
-arch-dev-machine:
-	ansible-playbook $(ANSIBLE_DIR)/$@.yml
-diff:
-	bash $(MAIN_DIR)/diff.sh
-stow:
-	$(INSTALL_DIR)/$@.sh
+default: help
+
+install-ansible:
+	$(main_dir)/scripts/install-ansible.sh
+
+dev-machine: install-ansible
+	ansible-playbook $(main_dir)/dev-machine.yml
+
+install: dev-machine

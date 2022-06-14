@@ -1,0 +1,22 @@
+- name: remove previous go installation
+  become: true
+  ansible.builtin.file:
+    path: /usr/local/go
+    state: absent
+
+- name: download go zip
+  ansible.builtin.get_url:
+    url: "{{ go_url }}{{ go_version }}.{{ go_arch }}.tar.gz"
+    dest: ./go.tar.gz
+    mode: 0660
+
+- name: extract go zip
+  ansible.builtin.unarchive:
+    src: ./go.tar.gz
+    dest: /usr/local
+    mode: 0755
+
+- name: remove go zip
+  ansible.builtin.file:
+    path: ./go.tar.gz
+    state: absent

@@ -1,28 +1,35 @@
+apt_packages:
+  - { package_name: "build-essential", state: "present" }
+  - { package_name: "curl", state: "present" }
+  - { package_name: "coreutils", state: "present" }
+  - { package_name: "net-tools", state: "present" }
+  - { package_name: "neovim", state: "present" }
+  - { package_name: "podman", state: "present" }
+  - { package_name: "tldr", state: "present" }
+
+dnf_packages:
+  - { package_name: "jq", state: "present" }
+  - { package_name: "lazygit", state: "present" }
+  - { package_name: "neovim", state: "present" }
+  - { package_name: "procps-ng", state: "present" }
+  - { package_name: "ripgrep", state: "present" }
+  - { package_name: "slirp4netns", state: "present" }
+  - { package_name: "tldr", state: "present" }
+  - { package_name: "zsh", state: "present" }
+
 brew_packages:
-  - { package_name: "go", state: "present" }
   - { package_name: "neovim", state: "present" }
   - { package_name: "tldr", state: "present" }
   - { package_name: "ripgrep", state: "present" }
   - { package_name: "lazygit", state: "present" }
   - { package_name: "clang-format", state: "present" }
 
-apt_packages:
-  - { package_name: "build-essential", state: "present" }
-  - { package_name: "curl", state: "present" }
-  - { package_name: "coreutils", state: "present" }
-  - { package_name: "go", state: "present" }
-  - { package_name: "net-tools", state: "present" }
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "tldr", state: "present" }
-
 pacman_packages:
-  - { package_name: "go", state: "present" }
   - { package_name: "jq", state: "present" }
   - { package_name: "lazygit", state: "present" }
   - { package_name: "neovim", state: "present" }
   - { package_name: "ripgrep", state: "present" }
   - { package_name: "spotifyd", state: "present" }
   - { package_name: "slirp4netns", state: "present" }
-  - { package_name: "stow", state: "present" }
   - { package_name: "tldr", state: "present" }
   - { package_name: "zsh", state: "present" }

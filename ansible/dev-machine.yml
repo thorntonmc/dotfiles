@@ -1,0 +1,56 @@
+- name: dev-machine
+  hosts: localhost
+  vars:
+    home: "{{ ansible_facts['user_dir'] }}"
+  tasks:
+    - name: install packages
+      ansible.builtin.include_role:
+        name: packages
+      vars:
+        manager: "{{ ansible_facts['pkg_mgr']}}"
+
+    - name: install go
+      ansible.builtin.include_role:
+        name: go
+
+    - name: setup rootless podman
+      ansible.builtin.include_role:
+        name: rootless-podman
+      tags: rootless-podman
+
+    - name: create {{ home }}/.local
+      ansible.builtin.file:
+        state: directory
+        dest: "{{ home }}/.local"
+        mode: 0755
+      tags: dotfiles
+
+    - name: get app dir
+      ansible.builtin.shell: |
+          dirname {{ playbook_dir }}
+      register: dirname
+      tags: dotfiles
+
+    - name: set app dir
+      set_fact:
+        appdir: "{{ dirname.stdout }}"
+      tags: dotfiles
+
+    - name: symlink dotfiles
+      ansible.builtin.file:
+        state: link
+        src: "{{ item.src }}"
+        dest: "{{ item.dest}}"
+        force: true
+      with_items:
+        - { src: "{{ appdir }}/.vimrc", dest: "{{ home }}/.vimrc" }
+        - { src: "{{ appdir }}/.vim", dest: "{{ home }}/.vim" }
+        - { src: "{{ appdir }}/.bashrc", dest: "{{ home }}/.bashrc" }
+        - { src: "{{ appdir }}/.bash", dest: "{{ home }}/.bash" }
+        - { src: "{{ appdir }}/.zshrc", dest: "{{ home }}/.zshrc" }
+        - { src: "{{ appdir }}/.zsh", dest: "{{ home }}/.zshrc" }
+        - { src: "{{ appdir }}/.local/scripts", dest: "{{ home }}/.local/scripts" }
+        - { src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig" }
+        - { src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work" }
+      tags: dotfiles
+

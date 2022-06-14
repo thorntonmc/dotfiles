@@ -4,8 +4,8 @@
 	insteadOf = https://github.com/
 [user]
 	name = thorntonmc
-	email =  mthornton@wasabi.com
-	signingkey = D5CBAF7E8AA8F448
+	email = mt@mthornton.dev 
+	signingkey = 3E7E633F5938C54D
 [commit]
 	gpgsign = true
 [filter "lfs"]
@@ -13,5 +13,3 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[pull]
-	rebase = false

@@ -9,10 +9,11 @@
   tags: rootless-podman
 
 - name: increase number of namespaces
+  ignore_errors: true
   become: true
   ansible.posix.sysctl:
     name: user.max_user_namespaces
-    value: 28633
+    value: "28633"
     reload: true
   tags: rootless-podman
 
@@ -22,7 +23,7 @@
     path: /etc/subuid
     line: "{{ ansible_user_id }}:100000:65536"
     create: true
-    mode: u=rw, g=r, o=r
+    mode: 0644
   tags: rootless-podman
 
 - name: set subgid
@@ -31,5 +32,5 @@
     path: /etc/subgid
     line: "{{ ansible_user_id }}:100000:65536"
     create: true
-    mode: u=rw, g=r, o=r
+    mode: 0644
   tags: rootless-podman
