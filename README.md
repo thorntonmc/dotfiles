@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal dotfiles, with automatic installation that should work on
+My personal dotfiles, with automatic installation that work on
 Arch, Fedora, and Ubuntu
 
 To run the installer, simply
@@ -9,10 +9,7 @@ To run the installer, simply
 make install
 ```
 
-There is built in CI to ensure the installation works, on the LTS releases
-(and base image for Arch) for each distro.
-
-To test an image not covered, you can run
+To test the bootstrap in a container, you can run
 
 ```
 alias docker=podman
