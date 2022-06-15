@@ -48,7 +48,7 @@
         - { src: "{{ appdir }}/.bashrc", dest: "{{ home }}/.bashrc" }
         - { src: "{{ appdir }}/.bash", dest: "{{ home }}/.bash" }
         - { src: "{{ appdir }}/.zshrc", dest: "{{ home }}/.zshrc" }
-        - { src: "{{ appdir }}/.zsh", dest: "{{ home }}/.zshrc" }
+        - { src: "{{ appdir }}/.zsh", dest: "{{ home }}/.zsh" }
         - { src: "{{ appdir }}/.local/scripts", dest: "{{ home }}/.local/scripts" }
         - { src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig" }
         - { src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work" }
