@@ -13,6 +13,9 @@ install-ansible:
 dotfiles:
 	ansible-playbook $(ansible_dir)/dev-machine.yml --tags dotfiles
 
+packages:
+	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags packages
+
 rootless-podman:
 	ansible-playbook $(ansible_dir)/dev-machine.yml --tags rootless-podman
 

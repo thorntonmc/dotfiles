@@ -1,11 +1,20 @@
-- include_tasks: apt.yml
+- include_tasks:
+    file: apt.yml
+    apply:
+      tags: packages
   when: manager == "apt"
+  tags: packages
 
-- include_tasks: brew.yml
-  when: manager == "brew"
-
-- include_tasks: dnf.yml
+- include_tasks:
+    file: dnf.yml
+    apply:
+      tags: packages
   when: manager == "dnf"
+  tags: packages
 
-- include_tasks: pacman.yml
+- include_tasks:
+    file: pacman.yml
+    apply:
+      tags: packages
   when: manager == "pacman"
+  tags: packages
