@@ -28,6 +28,7 @@ pacman_packages:
   - { package_name: "bluez", state: "present" }
   - { package_name: "bluez-utils", state: "present" }
   - { package_name: "blueberry", state: "present" }
+  - { package_name: "go", state: "present" }
   - { package_name: "jq", state: "present" }
   - { package_name: "lazygit", state: "present" }
   - { package_name: "neovim", state: "present" }
