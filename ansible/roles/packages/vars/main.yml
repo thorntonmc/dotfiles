@@ -34,6 +34,7 @@ pacman_packages:
   - { package_name: "neovim", state: "present" }
   - { package_name: "networkmanager-l2tp", state: "present" }
   - { package_name: "ripgrep", state: "present" }
+  - { package_name: "shellcheck", state: "present" }
   - { package_name: "spotifyd", state: "present" }
   - { package_name: "slirp4netns", state: "present" }
   - { package_name: "networkmanager-strongswan", state: "present"}
