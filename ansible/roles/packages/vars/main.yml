@@ -32,8 +32,10 @@ pacman_packages:
   - { package_name: "jq", state: "present" }
   - { package_name: "lazygit", state: "present" }
   - { package_name: "neovim", state: "present" }
+  - { package_name: "networkmanager-l2tp", state: "present" }
   - { package_name: "ripgrep", state: "present" }
   - { package_name: "spotifyd", state: "present" }
   - { package_name: "slirp4netns", state: "present" }
+  - { package_name: "networkmanager-strongswan", state: "present"}
   - { package_name: "tldr", state: "present" }
   - { package_name: "zsh", state: "present" }
