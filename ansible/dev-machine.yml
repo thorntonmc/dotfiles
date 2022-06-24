@@ -58,5 +58,6 @@
         - { src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig" }
         - { src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work" }
         - { src: "{{ appdir }}/logid.cfg", dest: "/etc/logid.cfg" }
+        - { src: "{{ appdir }}/.config/i3", dest: "{{ home }}/.config/i3" }
       tags: dotfiles
 
