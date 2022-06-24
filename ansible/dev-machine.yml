@@ -9,9 +9,12 @@
       vars:
         manager: "{{ ansible_facts['pkg_mgr']}}"
 
-    - name: install go
-      ansible.builtin.include_role:
-        name: go
+    - name: enable bluetooth
+      become: true
+      ansible.builtin.systemd:
+         name: bluetooth
+         enabled: true
+         state: started
 
     - name: setup rootless podman
       ansible.builtin.include_role:
