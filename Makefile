@@ -20,6 +20,6 @@ rootless-podman:
 	ansible-playbook $(ansible_dir)/dev-machine.yml --tags rootless-podman
 
 dev-machine: install-ansible
-	ansible-playbook $(ansible_dir)/dev-machine.yml
+	ansible-playbook -K $(ansible_dir)/dev-machine.yml
 
 install: dev-machine
