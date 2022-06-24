@@ -8,6 +8,7 @@
         name: packages
       vars:
         manager: "{{ ansible_facts['pkg_mgr']}}"
+      tags: packages
 
     - name: enable bluetooth
       become: true
