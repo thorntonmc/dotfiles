@@ -25,4 +25,8 @@ logi-ops:
 	./scripts/logi-ops.sh
 extras: logi-ops
 
+aur: ./scripts/aur.sh
+
+arch-dev-machine: dotfiles dev-machine aur extras
+
 install: dev-machine
