@@ -21,5 +21,8 @@ rootless-podman:
 
 dev-machine: install-ansible
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml
+logi-ops: 
+	./scripts/logi-ops.sh
+extras: logi-ops
 
 install: dev-machine

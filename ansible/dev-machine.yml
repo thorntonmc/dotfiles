@@ -41,6 +41,7 @@
       tags: dotfiles
 
     - name: symlink dotfiles
+      become: true
       ansible.builtin.file:
         state: link
         src: "{{ item.src }}"
@@ -56,5 +57,6 @@
         - { src: "{{ appdir }}/.local/scripts", dest: "{{ home }}/.local/scripts" }
         - { src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig" }
         - { src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work" }
+        - { src: "{{ appdir }}/logid.cfg", dest: "/etc/logid.cfg" }
       tags: dotfiles
 
