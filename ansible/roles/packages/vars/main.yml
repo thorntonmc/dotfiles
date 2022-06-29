@@ -1,47 +1,49 @@
+---
 apt_packages:
-  - { package_name: "build-essential", state: "present" }
-  - { package_name: "curl", state: "present" }
-  - { package_name: "coreutils", state: "present" }
-  - { package_name: "net-tools", state: "present" }
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "podman", state: "present" }
-  - { package_name: "tldr", state: "present" }
+  - {package_name: "build-essential", state: "present"}
+  - {package_name: "curl", state: "present"}
+  - {package_name: "coreutils", state: "present"}
+  - {package_name: "net-tools", state: "present"}
+  - {package_name: "neovim", state: "present"}
+  - {package_name: "podman", state: "present"}
+  - {package_name: "tldr", state: "present"}
 
 dnf_packages:
-  - { package_name: "jq", state: "present" }
-  - { package_name: "lazygit", state: "present" }
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "procps-ng", state: "present" }
-  - { package_name: "ripgrep", state: "present" }
-  - { package_name: "slirp4netns", state: "present" }
-  - { package_name: "tldr", state: "present" }
-  - { package_name: "zsh", state: "present" }
+  - {package_name: "jq", state: "present"}
+  - {package_name: "lazygit", state: "present"}
+  - {package_name: "neovim", state: "present"}
+  - {package_name: "procps-ng", state: "present"}
+  - {package_name: "ripgrep", state: "present"}
+  - {package_name: "slirp4netns", state: "present"}
+  - {package_name: "tldr", state: "present"}
+  - {package_name: "zsh", state: "present"}
 
 brew_packages:
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "tldr", state: "present" }
-  - { package_name: "ripgrep", state: "present" }
-  - { package_name: "lazygit", state: "present" }
-  - { package_name: "clang-format", state: "present" }
+  - {package_name: "neovim", state: "present"}
+  - {package_name: "tldr", state: "present"}
+  - {package_name: "ripgrep", state: "present"}
+  - {package_name: "lazygit", state: "present"}
+  - {package_name: "clang-format", state: "present"}
 
 pacman_packages:
-  - { package_name: "bluez", state: "present" }
-  - { package_name: "bluez-utils", state: "present" }
-  - { package_name: "blueberry", state: "present" }
-  - { package_name: "cmake", state: "present" }
-  - { package_name: "flameshot", state: "present" }
-  - { package_name: "github-cli", state: "present" }
-  - { package_name: "go", state: "present" }
-  - { package_name: "gopls", state: "present" }
-  - { package_name: "jq", state: "present" }
-  - { package_name: "lazygit", state: "present" }
-  - { package_name: "neovim", state: "present" }
-  - { package_name: "networkmanager-l2tp", state: "present" }
-  - { package_name: "podman", state: "present" }
-  - { package_name: "ripgrep", state: "present" }
-  - { package_name: "shellcheck", state: "present" }
-  - { package_name: "spotifyd", state: "present" }
-  - { package_name: "slirp4netns", state: "present" }
-  - { package_name: "networkmanager-strongswan", state: "present"}
-  - { package_name: "tldr", state: "present" }
-  - { package_name: "zsh", state: "present" }
+  - {package_name: "bluez", state: "present"}
+  - {package_name: "bluez-utils", state: "present"}
+  - {package_name: "blueberry", state: "present"}
+  - {package_name: "cmake", state: "present"}
+  - {package_name: "flameshot", state: "present"}
+  - {package_name: "github-cli", state: "present"}
+  - {package_name: "go", state: "present"}
+  - {package_name: "gopls", state: "present"}
+  - {package_name: "jq", state: "present"}
+  - {package_name: "lazygit", state: "present"}
+  - {package_name: "neovim", state: "present"}
+  - {package_name: "networkmanager-l2tp", state: "present"}
+  - {package_name: "podman", state: "present"}
+  - {package_name: "ripgrep", state: "present"}
+  - {package_name: "shellcheck", state: "present"}
+  - {package_name: "spotifyd", state: "present"}
+  - {package_name: "slirp4netns", state: "present"}
+  - {package_name: "networkmanager-strongswan", state: "present"}
+  - {package_name: "tldr", state: "present"}
+  - {package_name: "yamllint", state: "present"}
+  - {package_name: "zsh", state: "present"}
