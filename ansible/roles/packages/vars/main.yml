@@ -38,6 +38,8 @@ pacman_packages:
   - {package_name: "lazygit", state: "present"}
   - {package_name: "neovim", state: "present"}
   - {package_name: "networkmanager-l2tp", state: "present"}
+  - {package_name: "nodejs", state: "present"}
+  - {package_name: "npm", state: "present"}
   - {package_name: "podman", state: "present"}
   - {package_name: "ripgrep", state: "present"}
   - {package_name: "shellcheck", state: "present"}
