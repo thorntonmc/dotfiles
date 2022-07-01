@@ -6,14 +6,21 @@ set termguicolors
 let g:equinusocio_material_style = 'darker'
 colorscheme  equinusocio_material
 
-""" 
+"""
 " ALE
 """"
 let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\    'go': ['gofmt', 'gofumpt', 'goimports', 'golines'],
+\    'json': ['jq'],
 \    'sh': ['shfmt']
 \}
 
+let g:ale_fix_on_save=1
+
+" Shell
+let g:ale_sh_shfmt_options = '-i 2 -ci'
+let g:ale_sh_shellcheck_options = '-o all'
 
 """
 " NERDTree
