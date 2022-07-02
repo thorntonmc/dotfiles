@@ -35,3 +35,12 @@ docker run \
 
 ### aur stuff
 spotify, slack, etc...
+
+# enabling bluetooth on boo
+
+```
+/etc/bluetooth/main.conf
+------------------------------------------------------------------------------
+[Policy]
+AutoEnable=true
+```
