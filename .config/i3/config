@@ -263,6 +263,8 @@ for_window [class="nm-connection-editor"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="zoom "] floating enable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
+for_window [class="nvidia-settings"] floating enable
+for_window [class="Nvidia-settings"] floating enable
 
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
