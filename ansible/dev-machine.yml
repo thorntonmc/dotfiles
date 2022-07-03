@@ -13,9 +13,9 @@
     - name: enable bluetooth
       become: true
       ansible.builtin.systemd:
-         name: bluetooth
-         enabled: true
-         state: started
+        name: bluetooth
+        enabled: true
+        state: started
 
     - name: setup rootless podman
       ansible.builtin.include_role:
@@ -48,16 +48,17 @@
         dest: "{{ item.dest}}"
         force: true
       with_items:
-        - { src: "{{ appdir }}/.vimrc", dest: "{{ home }}/.vimrc" }
-        - { src: "{{ appdir }}/.vim", dest: "{{ home }}/.vim" }
-        - { src: "{{ appdir }}/.bashrc", dest: "{{ home }}/.bashrc" }
-        - { src: "{{ appdir }}/.bash", dest: "{{ home }}/.bash" }
-        - { src: "{{ appdir }}/.zshrc", dest: "{{ home }}/.zshrc" }
-        - { src: "{{ appdir }}/.zsh", dest: "{{ home }}/.zsh" }
-        - { src: "{{ appdir }}/.local/scripts", dest: "{{ home }}/.local/scripts" }
-        - { src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig" }
-        - { src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work" }
-        - { src: "{{ appdir }}/logid.cfg", dest: "/etc/logid.cfg" }
-        - { src: "{{ appdir }}/.config/i3", dest: "{{ home }}/.config/i3" }
+        - {src: "{{ appdir }}/.vimrc", dest: "{{ home }}/.vimrc"}
+        - {src: "{{ appdir }}/.vim", dest: "{{ home }}/.vim"}
+        - {src: "{{ appdir }}/.bashrc", dest: "{{ home }}/.bashrc"}
+        - {src: "{{ appdir }}/.bash", dest: "{{ home }}/.bash"}
+        - {src: "{{ appdir }}/.zshrc", dest: "{{ home }}/.zshrc"}
+        - {src: "{{ appdir }}/.zsh", dest: "{{ home }}/.zsh"}
+        - {src: "{{ appdir }}/.local/scripts", dest: "{{ home }}/.local/scripts"}
+        - {src: "{{ appdir }}/.gitconfig", dest: "{{ home }}/.gitconfig"}
+        - {src: "{{ appdir }}/.gitconfig-work", dest: "{{ home }}/.gitconfig-work"}
+        - {src: "{{ appdir }}/logid.cfg", dest: "/etc/logid.cfg"}
+        - {src: "{{ appdir }}/.config/i3", dest: "{{ home }}/.config/i3"}
+        - {src: "{{ appdir }}/.config/nvim", dest: "{{ home }}/.config/nvim"}
+        - {src: "{{ appdir }}/.config/alacritty", dest: "{{ home }}/.config/alacritty"}
       tags: dotfiles
-

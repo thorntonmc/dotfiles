@@ -26,6 +26,7 @@ brew_packages:
   - {package_name: "clang-format", state: "present"}
 
 pacman_packages:
+  - {package_name: "alacritty", state: "present"}
   - {package_name: "bluez", state: "present"}
   - {package_name: "bluez-utils", state: "present"}
   - {package_name: "blueberry", state: "present"}
@@ -39,6 +40,7 @@ pacman_packages:
   - {package_name: "neovim", state: "present"}
   - {package_name: "networkmanager-l2tp", state: "present"}
   - {package_name: "nodejs", state: "present"}
+  - {package_name: "noto-fonts-emoji", state: "present"}
   - {package_name: "npm", state: "present"}
   - {package_name: "podman", state: "present"}
   - {package_name: "ripgrep", state: "present"}
