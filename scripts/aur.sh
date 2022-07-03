@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yay -Syu 1password slack-desktop spotify zoom
+yay -Syu argo 1password slack-desktop spotify zoom
