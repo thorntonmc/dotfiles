@@ -36,7 +36,7 @@ docker run \
 ### aur stuff
 spotify, slack, etc...
 
-# enabling bluetooth on boo
+# enabling bluetooth on boot
 
 ```
 /etc/bluetooth/main.conf
