@@ -6,20 +6,20 @@ set -eo pipefail
 
 apt_install() {
     export DEBIAN_FRONTEND=noninteractive # skip tzinfo prompts
-    apt update && apt install -y ansible
+    sudo apt update && apt install -y ansible
     unset DEBIAN_FRONTEND
 }
 
 dnf_install() {
-    dnf -y install ansible
+    sudo dnf -y install ansible
 }
 
 pacman_install() {
-    pacman -Syu --noconfirm ansible
+    sudo pacman -Syu --noconfirm ansible
 }
 
 yum_install() {
-    yum -y install ansible
+    sudo yum -y install ansible
 }
 
 function main() {
