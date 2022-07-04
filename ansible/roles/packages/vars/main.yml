@@ -30,6 +30,7 @@ pacman_packages:
   - {package_name: "bluez", state: "present"}
   - {package_name: "bluez-utils", state: "present"}
   - {package_name: "blueberry", state: "present"}
+  - {package_name: "buildah", state: "present"}
   - {package_name: "cmake", state: "present"}
   - {package_name: "flameshot", state: "present"}
   - {package_name: "github-cli", state: "present"}
