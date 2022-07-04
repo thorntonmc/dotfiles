@@ -9,6 +9,8 @@ apt_packages:
   - {package_name: "tldr", state: "present"}
 
 dnf_packages:
+  - {package_name: "1password", state: "present"}
+  - {package_name: "alacritty", state: "present"}
   - {package_name: "jq", state: "present"}
   - {package_name: "lazygit", state: "present"}
   - {package_name: "neovim", state: "present"}
@@ -16,14 +18,13 @@ dnf_packages:
   - {package_name: "ripgrep", state: "present"}
   - {package_name: "slirp4netns", state: "present"}
   - {package_name: "tldr", state: "present"}
-  - {package_name: "zsh", state: "present"}
-
-brew_packages:
-  - {package_name: "neovim", state: "present"}
-  - {package_name: "tldr", state: "present"}
-  - {package_name: "ripgrep", state: "present"}
-  - {package_name: "lazygit", state: "present"}
-  - {package_name: "clang-format", state: "present"}
+  - {package_name: "ShellCheck", state: "present"}
+  - {package_name: "NetworkManager-strongswan", state: "present"}
+  - {package_name: "NetworkManager-l2tp", state: "present"}
+  - {package_name: "go", state: "present"}
+  - {package_name: "golang-x-tools-gopls", state: "present"}
+  - {package_name: "cmake", state: "present"}
+  - {package_name: "yamllint", state: "present"}
 
 pacman_packages:
   - {package_name: "alacritty", state: "present"}
