@@ -12,6 +12,7 @@ window:
     y: 8
   dynamic_padding: true
   opacity: 0.95
+  decorations: none
 
 key_bindings:
   - { key: Space, mods: Control, action: ToggleViMode }
