@@ -3,13 +3,13 @@
   hosts: localhost
   vars:
     home: "{{ ansible_facts['user_dir'] }}"
-    manager: "{{ ansible_facts['pkg_mgr'] }}"
+    pkg_manager: "{{ ansible_facts['pkg_mgr'] }}"
   tasks:
     - name: install packages
       ansible.builtin.include_role:
         name: packages
       vars:
-        manager: "{{ manager }}"
+        manager: "{{ pkg_manager }}"
       tags: packages
 
     - name: enable bluetooth

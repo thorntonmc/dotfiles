@@ -26,7 +26,9 @@ logi-ops:
 extras: logi-ops
 
 aur: install-ansible
-	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags packages -e "manager=yay"
+	ansible-playbook -K $(ansible_dir)/dev-machine.yml \
+		--tags packages \
+		-e "pkg_manager=yay"
 
 arch-dev-machine: install-ansible dotfiles dev-machine aur extras
 
