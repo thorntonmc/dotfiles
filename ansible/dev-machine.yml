@@ -68,15 +68,5 @@
         - {src: "{{ appdir }}/logid.cfg", dest: "/etc/logid.cfg"}
         - {src: "{{ appdir }}/.config/nvim", dest: "{{ home }}/.config/nvim"}
         - {src: "{{ appdir }}/.config/alacritty", dest: "{{ home }}/.config/alacritty"}
-      tags: dotfiles
-
-    - name: i3 dotfiles
-      become: true
-      ansible.builtin.file:
-        state: link
-        src: "{{ item.src }}"
-        dest: "{{ item.dest }}"
-        force: true
-      with_items:
         - {src: "{{ appdir }}/.config/i3", dest: "{{ home }}/.config/i3"}
-      tags: i3-dotfiles
+      tags: dotfiles

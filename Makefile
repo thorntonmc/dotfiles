@@ -12,6 +12,8 @@ install-ansible:
 
 dotfiles:
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags dotfiles
+i3:
+	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags i3
 
 packages:
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags packages
