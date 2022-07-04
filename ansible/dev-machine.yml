@@ -19,6 +19,12 @@
         enabled: true
         state: started
 
+    - name: enable bluetooth on start
+      become: true
+      ansible.builtin.lineinfile:
+        path: /etc/bluetooth/main.conf
+        line: AutoEnable=true
+
     - name: setup rootless podman
       ansible.builtin.include_role:
         name: rootless-podman
