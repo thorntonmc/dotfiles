@@ -21,11 +21,12 @@ rootless-podman:
 
 dev-machine: install-ansible
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml
-logi-ops: 
+logi-ops:
 	./scripts/logi-ops.sh
 extras: logi-ops
 
-aur: ./scripts/aur.sh
+aur: install-ansible
+	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags packages -e "manager=yay"
 
 arch-dev-machine: install-ansible dotfiles dev-machine aur extras
 
