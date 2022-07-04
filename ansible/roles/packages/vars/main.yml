@@ -23,7 +23,11 @@ dnf_packages:
   - {package_name: "NetworkManager-l2tp", state: "present"}
   - {package_name: "go", state: "present"}
   - {package_name: "golang-x-tools-gopls", state: "present"}
+  - {package_name: "gcc-g++", state: "present"}
   - {package_name: "cmake", state: "present"}
+  - {package_name: "libevdev-devel", state: "present"}
+  - {package_name: "systemd-devel", state: "present"}
+  - {package_name: "libconfig-devel", state: "present"}
   - {package_name: "yamllint", state: "present"}
 
 pacman_packages:
