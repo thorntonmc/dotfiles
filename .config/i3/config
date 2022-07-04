@@ -292,7 +292,18 @@ set $yellowbrown	#e1b700
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+    font pango: Noto Sans Regular 16
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        position bottom
+        tray_output primary
+        tray_padding 0
+        colors {
+            separator   $purple
+            background  $darkgrey
+            statusline  $white
+        }
+}
 
 #####################################
 # Application menu handled by rofi: #

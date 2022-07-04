@@ -16,3 +16,6 @@ else
   polybar --reload example &
 fi
 echo "Bars launched..."
+
+export D=$(ls)
+
