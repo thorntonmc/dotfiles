@@ -1,3 +1,4 @@
+---
 - include_tasks:
     file: apt.yml
     apply:
@@ -17,4 +18,11 @@
     apply:
       tags: packages
   when: manager == "pacman"
+  tags: packages
+
+- include_tasks:
+    file: yay.yml
+    apply:
+      tags: packages
+  when: manager == "yay"
   tags: packages

@@ -52,3 +52,10 @@ pacman_packages:
   - {package_name: "tldr", state: "present"}
   - {package_name: "yamllint", state: "present"}
   - {package_name: "zsh", state: "present"}
+
+yay_packages:
+  - {package_name: "1password", state: "present"}
+  - {package_name: "argo", state: "present"}
+  - {package_name: "spotify", state: "present"}
+  - {package_name: "slack-desktop", state: "present"}
+  - {package_name: "zoom", state: "present"}
