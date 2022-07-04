@@ -29,18 +29,3 @@ docker run \
     dotfiles_${image}:latest \
     ./scripts/install-ansible.sh && ansible-playbook ansible/dev-machine.yml
 ```
-
-## todo
-
-
-### aur stuff
-spotify, slack, etc...
-
-# enabling bluetooth on boot
-
-```
-/etc/bluetooth/main.conf
-------------------------------------------------------------------------------
-[Policy]
-AutoEnable=true
-```
