@@ -61,4 +61,5 @@
         - {src: "{{ appdir }}/.config/i3", dest: "{{ home }}/.config/i3"}
         - {src: "{{ appdir }}/.config/nvim", dest: "{{ home }}/.config/nvim"}
         - {src: "{{ appdir }}/.config/alacritty", dest: "{{ home }}/.config/alacritty"}
+        - {src: "{{ appdir }}/.config/polybar", dest: "{{ home }}/.config/polybar"}
       tags: dotfiles
