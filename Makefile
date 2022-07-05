@@ -3,8 +3,6 @@ install_dir:=$(main_dir)/install
 ansible_dir:=$(main_dir)/ansible
 install_main := $(install_dir)/main.sh
 
-.PHONY: install
-
 default: help
 
 install-ansible:
@@ -12,8 +10,6 @@ install-ansible:
 
 dotfiles:
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags dotfiles
-i3:
-	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags i3
 
 packages:
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml --tags packages
