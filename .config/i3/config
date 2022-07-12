@@ -149,6 +149,8 @@ bindsym $mod+Shift+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+g layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -193,7 +195,7 @@ bindsym Print $exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screensho
 ######################################
 # keybindings for custom scripts: #
 ######################################
-bindsym $mod+Shift+g $exec ~/.config/i3/scripts/swap-keylayout
+#bindsym $mod+Shift+g $exec ~/.config/i3/scripts/swap-keylayout
 
 ##########################################
 # configuration for workspace behaviour: #
