@@ -11,7 +11,7 @@ Plug 'yunlingz/equinusocio-material.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 
+" language sepcific
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
-
-

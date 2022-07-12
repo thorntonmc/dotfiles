@@ -13,7 +13,8 @@ let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \    'go': ['gofmt', 'gofumpt', 'goimports', 'golines'],
 \    'json': ['jq'],
-\    'sh': ['shfmt']
+\    'sh': ['shfmt'],
+\    'terraform': ['terraform']
 \}
 
 let g:ale_fix_on_save=1
