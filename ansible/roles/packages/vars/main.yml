@@ -37,6 +37,7 @@ pacman_packages:
   - {package_name: "blueberry", state: "present"}
   - {package_name: "buildah", state: "present"}
   - {package_name: "cmake", state: "present"}
+  - {package_name: "fd", state: "present"}
   - {package_name: "flameshot", state: "present"}
   - {package_name: "github-cli", state: "present"}
   - {package_name: "go", state: "present"}
