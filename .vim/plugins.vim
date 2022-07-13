@@ -11,6 +11,7 @@ Plug 'yunlingz/equinusocio-material.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 
+Plug 'chriskempson/base16-vim'
 " language sepcific
 Plug 'hashivim/vim-terraform'
 

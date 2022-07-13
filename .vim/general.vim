@@ -62,7 +62,7 @@ set foldlevel=99
 set foldminlines=99
 
 " wrap long lines
-set nowrap 
+set nowrap
 
 " use indents of 4 spaces
 set shiftwidth=4
@@ -130,4 +130,3 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-

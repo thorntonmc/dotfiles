@@ -2,6 +2,9 @@
 
 export GPG_TTY
 export SSH_AUTH_SOCK
+export ALACRITTY_BASEDIR
+export ALACRITTY_CONFIG
+export ALACRITTY_THEMES
 
 SSH_AUTH_SOCK=~/.1password/agent.sock
 
@@ -9,3 +12,8 @@ PS1='\[\e[0;1;32m\]\u\[\e[0;1;32m\]@\[\e[0;1;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w \[\
 GPG_TTY=$(tty)
 
 PATH="${PATH}:${HOME}/go/bin"
+PATH="${PATH}:${HOME}/.local/bin"
+
+ALACRITTY_BASEDIR="${HOME}/.config/alacritty"
+ALACRITTY_CONFIG="${ALACRITTY_BASEDIR}/alacritty.yml"
+ALACRITTY_THEMES="${ALACRITTY_BASEDIR}/themes"

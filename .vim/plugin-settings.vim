@@ -3,8 +3,9 @@
 """
 set termguicolors
 
-let g:equinusocio_material_style = 'darker'
-colorscheme  equinusocio_material
+"let g:equinusocio_material_style = 'darker'
+"colorscheme  equinusocio_material
+colorscheme base16-default-dark
 
 """
 " ALE
