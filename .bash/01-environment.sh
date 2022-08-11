@@ -5,6 +5,7 @@ export SSH_AUTH_SOCK
 export ALACRITTY_BASEDIR
 export ALACRITTY_CONFIG
 export ALACRITTY_THEMES
+export KUBE_CONFIG_DIR="${HOME}/.kube"
 
 SSH_AUTH_SOCK=~/.1password/agent.sock
 
