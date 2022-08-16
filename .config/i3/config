@@ -269,7 +269,8 @@ for_window [class="zoom "] floating enable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
 for_window [class="nvidia-settings"] floating enable
 for_window [class="Nvidia-settings"] floating enable
-
+for_window [class="1password"] floating enable
+for_window [class="1Password"] floating enable
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
 ######################################
