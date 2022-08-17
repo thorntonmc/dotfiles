@@ -2,6 +2,8 @@ set runtimepath+=~/.vim/
 
 call plug#begin()
 
+Plug 'tomasiser/vim-code-dark'
+
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/The-NERD-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
