@@ -11,3 +11,4 @@ done
 for config in "${HOME}"/.bash/*; do
     source "${config}"
 done
+export ANSIBLE_VAULT_PASSWORD_FILE=/home/mct/.vault_pass
