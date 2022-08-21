@@ -38,12 +38,15 @@ pacman_packages:
   - {package_name: "buildah", state: "present"}
   - {package_name: "cmake", state: "present"}
   - {package_name: "fd", state: "present"}
+  - {package_name: "firefox", state: "present"}
   - {package_name: "flameshot", state: "present"}
   - {package_name: "github-cli", state: "present"}
   - {package_name: "go", state: "present"}
   - {package_name: "gopls", state: "present"}
   - {package_name: "jq", state: "present"}
   - {package_name: "lazygit", state: "present"}
+  - {package_name: "libconfig", state: "present"}
+  - {package_name: "neofetch", state: "present"}
   - {package_name: "neovim", state: "present"}
   - {package_name: "networkmanager-l2tp", state: "present"}
   - {package_name: "nodejs", state: "present"}
