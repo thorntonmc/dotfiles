@@ -23,11 +23,14 @@ logi-ops:
 	./scripts/logi-ops.sh
 extras: logi-ops
 
-aur: install-ansible
+install-yay:
+	./scripts/install-yay.sh
+
+aur: install-yay install-ansible
 	ansible-playbook -K $(ansible_dir)/dev-machine.yml \
 		--tags packages \
 		-e "pkg_manager=yay"
 
-arch-dev-machine: install-ansible dotfiles dev-machine aur extras
+arch-dev-machine: install-ansible install-yay dotfiles dev-machine aur extras
 
 install: dev-machine
