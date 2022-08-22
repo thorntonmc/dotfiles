@@ -15,5 +15,4 @@ window:
   decorations: none
 
 key_bindings:
-  - { key: Space, mods: Control, action: ToggleViMode }
   - {key: Space, mods: Control, action: ToggleViMode}
