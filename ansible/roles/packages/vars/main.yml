@@ -69,6 +69,7 @@ pacman_packages:
 yay_packages:
   - {package_name: "1password", state: "present"}
   - {package_name: "argo", state: "present"}
+  - {package_name: "code", state: "present"}
   - {package_name: "goland", state: "present"}
   - {package_name: "spotify", state: "present"}
   - {package_name: "slack-desktop", state: "present"}
