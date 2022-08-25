@@ -71,6 +71,7 @@ yay_packages:
   - {package_name: "1password", state: "present"}
   - {package_name: "argo", state: "present"}
   - {package_name: "goland", state: "present"}
+  - {package_name: "protoc-gen-go", state: "present"}
   - {package_name: "spotify", state: "present"}
   - {package_name: "slack-desktop", state: "present"}
   - {package_name: "visual-studio-code-bin", state: "present"}
