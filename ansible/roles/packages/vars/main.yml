@@ -53,6 +53,7 @@ pacman_packages:
   - {package_name: "noto-fonts-emoji", state: "present"}
   - {package_name: "npm", state: "present"}
   - {package_name: "podman", state: "present"}
+  - {package_name: "protobuf", state: "present"}
   - {package_name: "python-pip", state: "present"}
   - {package_name: "ripgrep", state: "present"}
   - {package_name: "shellcheck", state: "present"}
