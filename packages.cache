@@ -1,0 +1,5 @@
+yasm
+go-swagger
+lens
+
+symlink /usr/bin/protoc(-gen-go) $HOME/go/bin/protoc(-gen-go)
