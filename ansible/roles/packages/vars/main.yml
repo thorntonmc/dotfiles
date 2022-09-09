@@ -43,6 +43,7 @@ pacman_packages:
   - {package_name: "github-cli", state: "present"}
   - {package_name: "go", state: "present"}
   - {package_name: "gopls", state: "present"}
+  - {package_name: "helm", state: "present"}
   - {package_name: "jq", state: "present"}
   - {package_name: "lazygit", state: "present"}
   - {package_name: "libconfig", state: "present"}
