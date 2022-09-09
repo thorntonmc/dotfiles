@@ -45,6 +45,7 @@ pacman_packages:
   - {package_name: "gopls", state: "present"}
   - {package_name: "helm", state: "present"}
   - {package_name: "jq", state: "present"}
+  - {package_name: "kubectl", state: "present"}
   - {package_name: "lazygit", state: "present"}
   - {package_name: "libconfig", state: "present"}
   - {package_name: "neofetch", state: "present"}
