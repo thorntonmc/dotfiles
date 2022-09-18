@@ -32,7 +32,6 @@ dnf_packages:
 
 pacman_packages:
   - {package_name: "alacritty", state: "present"}
-  - {package_name: "base-devel", state: "present"}
   - {package_name: "bluez", state: "present"}
   - {package_name: "bluez-utils", state: "present"}
   - {package_name: "blueberry", state: "present"}
@@ -72,6 +71,7 @@ pacman_packages:
 yay_packages:
   - {package_name: "1password", state: "present"}
   - {package_name: "argo", state: "present"}
+  - {package_name: "flatpak", state: "present"}
   - {package_name: "goland", state: "present"}
   - {package_name: "grpcurl", state: "present"}
   - {package_name: "protoc-gen-go", state: "present"}

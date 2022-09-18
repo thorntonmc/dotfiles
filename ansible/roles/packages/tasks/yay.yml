@@ -1,5 +1,6 @@
 ---
 - name: install packages
+  become: true
   yay:
     name: "{{ item.package_name }}"
     state: "{{ item.state }}"
