@@ -32,6 +32,7 @@ dnf_packages:
 
 pacman_packages:
   - {package_name: "alacritty", state: "present"}
+  - {package_name: "bash-completion", state: "present"}
   - {package_name: "bluez", state: "present"}
   - {package_name: "bluez-utils", state: "present"}
   - {package_name: "blueberry", state: "present"}
