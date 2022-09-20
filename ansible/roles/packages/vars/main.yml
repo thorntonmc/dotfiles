@@ -58,6 +58,7 @@ pacman_packages:
   - {package_name: "protobuf", state: "present"}
   - {package_name: "python-pip", state: "present"}
   - {package_name: "ripgrep", state: "present"}
+  - {package_name: "rsync", state: "present"}
   - {package_name: "shellcheck", state: "present"}
   - {package_name: "shfmt", state: "present"}
   - {package_name: "spotifyd", state: "present"}
