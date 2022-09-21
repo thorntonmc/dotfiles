@@ -38,6 +38,8 @@ pacman_packages:
   - {package_name: "blueberry", state: "present"}
   - {package_name: "buildah", state: "present"}
   - {package_name: "cmake", state: "present"}
+  - {package_name: "earthly", state: "present"}
+  - {package_name: "distrobox", state: "present"}
   - {package_name: "fd", state: "present"}
   - {package_name: "firefox", state: "present"}
   - {package_name: "github-cli", state: "present"}
