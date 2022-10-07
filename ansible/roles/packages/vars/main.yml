@@ -38,8 +38,6 @@ pacman_packages:
   - {package_name: "blueberry", state: "present"}
   - {package_name: "buildah", state: "present"}
   - {package_name: "cmake", state: "present"}
-  - {package_name: "earthly", state: "present"}
-  - {package_name: "distrobox", state: "present"}
   - {package_name: "fd", state: "present"}
   - {package_name: "firefox", state: "present"}
   - {package_name: "github-cli", state: "present"}
@@ -75,7 +73,9 @@ pacman_packages:
 yay_packages:
   - {package_name: "1password", state: "present"}
   - {package_name: "argo", state: "present"}
+  - {package_name: "earthly", state: "present"}
   - {package_name: "flatpak", state: "present"}
+  - {package_name: "distrobox", state: "present"}
   - {package_name: "goland", state: "present"}
   - {package_name: "grpcurl", state: "present"}
   - {package_name: "protoc-gen-go", state: "present"}
