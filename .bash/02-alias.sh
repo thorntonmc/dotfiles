@@ -3,7 +3,6 @@
 alias ls="ls --color"
 alias l="ls --color"
 alias reload='source ${HOME}/.bashrc'
-alias vim=nvim
 alias docker=podman
 alias ssh='TERM=xterm-256color ssh'
 
