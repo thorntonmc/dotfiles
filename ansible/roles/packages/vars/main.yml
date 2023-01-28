@@ -74,7 +74,6 @@ yay_packages:
   - {package_name: "1password", state: "present"}
   - {package_name: "argo", state: "present"}
   - {package_name: "earthly", state: "present"}
-  - {package_name: "flatpak", state: "present"}
   - {package_name: "distrobox", state: "present"}
   - {package_name: "goland", state: "present"}
   - {package_name: "grpcurl", state: "present"}
