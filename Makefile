@@ -31,6 +31,6 @@ aur: install-yay install-ansible
 		--tags packages \
 		-e "pkg_manager=yay"
 
-arch-dev-machine: install-ansible install-yay dotfiles dev-machine aur extras
+arch-dev-machine: install-ansible install-yay dev-machine aur extras dotfiles
 
 install: dev-machine
