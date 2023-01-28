@@ -41,6 +41,7 @@ pacman_packages:
 
 yay_packages:
   - {package_name: "1password", state: "present"}
+  - {package_name: "anki", state: "present"}
   - {package_name: "argo", state: "present"}
   - {package_name: "earthly", state: "present"}
   - {package_name: "distrobox", state: "present"}
