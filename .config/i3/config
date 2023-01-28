@@ -169,6 +169,9 @@ bindsym $mod+Shift+n  $exec ~/.config/i3/scripts/empty_workspace
 
 # Multimedia Keys
 
+# key repeat
+$exec xset --nostartup-id xset r rate 350 35
+
 # volume
 bindsym XF86AudioRaiseVolume $exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume $exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
