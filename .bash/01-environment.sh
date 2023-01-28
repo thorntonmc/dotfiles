@@ -29,3 +29,6 @@ PATH=${PATH}:/opt/strongdm/bin/
 ALACRITTY_BASEDIR="${HOME}/.config/alacritty"
 ALACRITTY_CONFIG="${ALACRITTY_BASEDIR}/alacritty.yml"
 ALACRITTY_THEMES="${ALACRITTY_BASEDIR}/themes"
+
+eval "ssh-agent -s"
+ssh-add
