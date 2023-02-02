@@ -45,7 +45,6 @@ yay_packages:
   - {package_name: "argo", state: "present"}
   - {package_name: "earthly", state: "present"}
   - {package_name: "distrobox", state: "present"}
-  - {package_name: "goland", state: "present"}
   - {package_name: "grpcurl", state: "present"}
   - {package_name: "protoc-gen-go", state: "present"}
   - {package_name: "protoc-gen-go-grpc", state: "present"}
