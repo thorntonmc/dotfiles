@@ -241,6 +241,8 @@ $exec dex --autostart --environment i3
 
 $exec ~/.screenlayout/monitor.sh
 
+$exec $/.fehbg
+
 # set wallpaper
 $exec sleep 2 && nitrogen --restore
 
