@@ -30,6 +30,10 @@ require("lazy").setup({
       })
       require('vscode').load()
     end
+  },
+  -- copilot
+  {
+    "github/copilot.vim",
   }
 })
 
