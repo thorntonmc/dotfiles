@@ -1,5 +1,11 @@
+if test (uname) = "Darwin"
+	fish_add_path /Applications/Visual Studio Code.app/Contents/Resources/app/bin
+end
 set -gx EDITOR nvim
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if test -d /opt/homebrew/bin
+  eval (/opt/homebrew/bin/brew shellenv)
+end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -19,3 +25,4 @@ function fish_prompt
   set_color brgreen
   echo "\$ "
 end
+
