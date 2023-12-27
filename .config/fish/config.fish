@@ -1,7 +1,10 @@
 if test (uname) = "Darwin"
 	fish_add_path /Applications/Visual Studio Code.app/Contents/Resources/app/bin
 end
+fish_add_path "$HOME/go/bin"
+fish_add_path "$HOME/.krew/bin"
 set -gx EDITOR nvim
+eval ssh-add
 
 if test -d /opt/homebrew/bin
   eval (/opt/homebrew/bin/brew shellenv)
@@ -26,3 +29,4 @@ function fish_prompt
   echo "\$ "
 end
 
+set -gx DOCKER_HOST "unix://$HOME/.colima/docker.sock"

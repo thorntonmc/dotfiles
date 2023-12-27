@@ -43,6 +43,7 @@ jasper
 jpeg-turbo
 jpeg-xl
 jq
+krew
 kubernetes-cli
 lazydocker
 lazygit
