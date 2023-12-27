@@ -22,7 +22,7 @@ function fish_prompt
   set_color normal
   echo -n :
   set_color brblue
-  echo -n (pwd)
+  echo -n (prompt_pwd -d 0)
   set_color -o yellow
   echo (fish_git_prompt)
   set_color brgreen
